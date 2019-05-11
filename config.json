@@ -1,4 +1,4 @@
 {
-	"domain": ".localhost",
+	"domain": "ssoapp.com",
 	"secret": "unsafe_secret_key"
 }

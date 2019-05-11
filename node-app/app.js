@@ -73,6 +73,10 @@ app.post('/login', function(req, res) {
 		function(err, row) {
 			if (err) {
 				console.error(err);
+				res.render('index', {
+					error: err
+				});
+				return;
 			}
 
 			if (row === undefined) {
@@ -88,7 +92,10 @@ app.post('/login', function(req, res) {
 					jwt.sign(
 						{ username: row.username, email: row.email },
 						config.secret
-					)
+					),
+					{
+						domain: `.${config.domain}`
+					}
 				);
 
 				res.redirect('/');
