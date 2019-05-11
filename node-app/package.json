@@ -1,0 +1,24 @@
+{
+  "name": "tutorial-session-sharing",
+  "version": "1.0.0",
+  "description": "Sample node app part of a single sign-on system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Muhammad Osama Arshad",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "pug": "^2.0.3",
+    "sqlite3": "^4.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}

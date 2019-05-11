@@ -1,0 +1,4 @@
+{
+	"domain": ".localhost",
+	"secret": "unsafe_secret_key"
+}
