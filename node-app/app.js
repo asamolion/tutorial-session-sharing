@@ -86,6 +86,9 @@ app.post('/login', function(req, res) {
 				return;
 			}
 
+			// If the user exists and password is correct
+			// the store the token in the browser cookies under
+			// .domain
 			if (bcrypt.compare(password, row.password)) {
 				res.cookie(
 					'token',
@@ -94,6 +97,8 @@ app.post('/login', function(req, res) {
 						config.secret
 					),
 					{
+						// NOTICE the . behind the domain. This is necessary to ensure
+						// that the cookies are shared between subdomains
 						domain: `.${config.domain}`
 					}
 				);
